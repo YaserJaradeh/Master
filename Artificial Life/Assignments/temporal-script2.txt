@@ -1,0 +1,5 @@
+set title "Temporal Development of x(i) and y(i) New system" 
+set xlabel "Iteration number"
+set ylabel "Population"
+plot "state2.txt" using 1:2 title 'Prey' with lines,\
+	  "state2.txt" using 1:3 title 'Predator' with lines;

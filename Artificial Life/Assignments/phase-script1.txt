@@ -1,0 +1,4 @@
+set title "Phase plot of x(i) and y(i)" 
+set xlabel "Iteration number"
+set ylabel "Population"
+plot "state1.txt" using 2:3

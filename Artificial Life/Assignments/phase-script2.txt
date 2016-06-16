@@ -1,0 +1,4 @@
+set title "Phase plot of x(i) and y(i) New System" 
+set xlabel "Iteration number"
+set ylabel "Population"
+plot "state2.txt" using 2:3
