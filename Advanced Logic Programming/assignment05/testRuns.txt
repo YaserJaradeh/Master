@@ -1,0 +1,38 @@
+%%Task 1
+
+10 ?- L1 = [1,2,3,4,5], shift(L1, L2), shift(L2, L3).
+L1 = [1, 2, 3, 4, 5],
+L2 = [2, 3, 4, 5, 1],
+L3 = [3, 4, 5, 1, 2].
+
+%%Task 2
+
+24 ?- translate([1,2,3], L2).
+L2 = [one, two, three].
+
+25 ?- translate( L1, [one, two, three, four]).
+L1 = [1, 2, 3, 4].
+
+%%Task 3
+
+46 ?- linear([1,[2,3],[a,[b],c]], [1,2,3,a,b,l]).
+false.
+
+47 ?- linear([1,[2,3],[a,[b],c]], [1,2,3,a,b,c]).
+true .
+
+48 ?- linear([1,[2,3],[a,[b],[[c]]]], [1,2,3,a,b,c]).
+true .
+
+49 ?- linear([1,[2,3],[a,[b],[[c]]]], X).
+X = [1, 2, 3, a, b, c] ;
+false.
+
+50 ?- linear([1,[2,3],[a,[b],[[c],d,[f,[g]]]]], X).
+X = [1, 2, 3, a, b, c, d, f, g] ;
+false.
+
+%%Task 4
+8 ?-  group([1,1,1,1,2,c,c,1,1,d,e,e,e,e],X).
+X = [[1, 1, 1, 1], [2], [c, c], [1, 1], [d], [e, e, e|...]] ;
+false.

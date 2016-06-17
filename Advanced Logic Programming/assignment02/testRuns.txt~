@@ -1,0 +1,71 @@
+========================= Task 3 ==========================
+6 ?- nested_loop(Out,In).
+Out = 36762,
+In = 36826 ;  %PolygonFigure.java
+Out = 43113,
+In = 43140 ;  %GroupCommand.java
+Out = 51896,
+In = 51912 ;  %PatternPainter.java
+Out = 66226,
+In = 66236 ;  %StandardDrawingView.java
+Out = 71147,
+In = 71286    %GraphLayout.java
+========================= Task 4 ==========================
+7 ?- before_in_block(S1,S2,B).
+S1 = 28201,
+S2 = 28202,
+B = 28198 ;
+S1 = 28201,
+S2 = 28203,
+B = 28198 ;
+S1 = 28201,
+S2 = 28204,
+B = 28198 
+
+========================= Task 5(a) ==========================
+
+			 a
+		       /    \
+                      b      c
+                    /   \   / \
+                   d    e  -   f
+                   |    |      /\
+                   -    -      g -
+                              /\
+                             -  -  
+
+========================= Task 5(b) ==========================
+
+4 ?- binary_tree(t(t(-,b,-),a,t(-,c,-))).
+true.
+
+5 ?- binary_tree(t(t(t(-,d,-), b, t(-,e,-)) , a, t(-,c,t(t(-,g,-), f,-)) )).
+true.
+
+========================= Task 5(c) ==========================
+
+12 ?- symmetric(t(t(-,b,-),a,-)).
+false.
+
+13 ?- symmetric(t(t(-,b,-),a,t(-,c,-))).
+true.
+
+14 ?- symmetric(t(t(t(-,d,-),b,-),a,t(-,c,-))).
+false.
+
+15 ?- symmetric(t(t(t(-,d,-),b,t(-,e,-)),a,t(-,c,-))).
+false.
+
+16 ?- symmetric(t(t(t(-,d,-),b,t(-,e,-)),a,t(t(-,f,-),c,t(-,g,-)))).
+true.
+
+========================= Task 5(d) ==========================
+
+23 ?- size(t(-,a,-),Size).
+Size = 1.
+
+24 ?- size(t(t(-,b,-),a,t(-,c,-)),Size).
+Size = 2.
+
+
+

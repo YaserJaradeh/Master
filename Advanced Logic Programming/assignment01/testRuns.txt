@@ -1,0 +1,16 @@
+%% Test Run Task 1
+% ================
+6 ?- path(a,X).
+X = d ;
+X = f ;
+false.
+
+7 ?- path(b,e).
+false.
+
+%% Test Run Task 2
+% ================
+8 ?- search(A).
+A = [person('Tick', 'Chang', 15), person('Trick', 'Thatcher', 17), person('Track', 'Yang', 18)] ;
+A = [person('Tick', 'Chang', 15), person('Trick', 'Yang', 18), person('Track', 'Thatcher', 17)] ;
+false.

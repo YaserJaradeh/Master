@@ -1,0 +1,74 @@
+loop(Loop, Parent, EnclMethod, Body ) :-   
+   whileT  (Loop, Parent, EnclMethod, _, Body)
+   ;
+   doWhileT(Loop, Parent, EnclMethod, _, Body)
+   ;
+   forT    (Loop, Parent, EnclMethod, _,_,_, Body) 
+   ;
+   foreachT(Loop, Parent, EnclMethod, _,_, Body).
+   
+The predicate attempts to define the four famous kinds of loops:
+whileT,doWhileT,forT,foreachT.
+
+
+whileT(#id, #parent, #encl, #condition, #body)
+Represents the while statement.
+Arguments
+#id: id
+the unique ID assigned to this fact.
+#parent: id
+ID of the parent node.
+#encl: methodT, constructorT, classInitializerT
+ID of the enclosing element.
+#condition: expressionType
+ID of the expression of this while statement.
+#body statementType
+ID of the body of this while statement.
+
+doWhileT(#id, #parent, #enclMethod, #condition, #body)
+#id: id
+the unique ID assigned to this fact.
+#parent: id
+ID of the parent node.
+#encl: methodT, constructorT, classInitializerT
+ID of the enclosing element.
+#condition: expression
+ID of the expression of the loop condition of this do statement.
+#body statement
+ID of the body of this do statement.
+
+forT (#id, #parent, #encl, [#init_1,...], #condition, [#step_1,...], #body)
+#id: id
+the unique ID assigned to this fact.
+#parent: id
+ID of the parent node.
+#encl: methodT, constructorT, classInitializerT
+ID of the enclosing element.
+[#init_1,…]: expression, localT
+list of IDs of the initializer expressions in this for statement.
+#condition: expression, null
+ID of the expression in this for statement.
+[#step_1,…]: expression
+list of IDs of the update expressions in this for statement.
+
+foreachT (#id, #parent, #encl, #param, #expression, #body)
+#id: id
+the unique ID assigned to this fact.
+#parent: id
+ID of the parent node.
+#encl: methodT, constructorT, classInitializerT
+ID of the enclosing element.
+#param, paramT
+ID of the local parameter of this for statement.
+#expression expression
+ID of the expression (of type list or array) in this for statement.
+#body: statement
+ID of the body of this for statement.
+
+those loops share the following arguments:
+#id
+#parent
+#encl
+#body
+
+Prolog backtracks to find any match and produce the output.

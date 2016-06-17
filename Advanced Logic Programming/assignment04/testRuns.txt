@@ -1,0 +1,46 @@
+========================= Task 2 ==========================
+34 ?- category(X,Y).
+X = ann,
+Y = winner ;
+X = pat,
+Y = winner ;
+X = jim,
+Y = loser ;
+X = jim,
+Y = loser ;
+X = tom,
+Y = fighter ;
+false.
+
+35 ?- category(yaser,Y).
+false.
+
+36 ?- category(tom, fighter).
+true.
+
+========================= Task 3 ==========================
+39 ?- r(4).
+true.
+
+40 ?- s(4).
+true.
+
+41 ?- r(X).
+X = 4 ;
+X = 6 ;
+X = 22 ;
+X = 7 ;
+X = 97 ;
+X = 46 ;
+X = 2 ;
+X = 8 ;
+X = 0.
+
+42 ?- s(X).
+true.
+
+43 ?- r(1000).
+false.
+
+44 ?- s(1000).
+false.

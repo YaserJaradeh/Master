@@ -1,0 +1,14 @@
+a)
+7 ?- set_prolog_flag( toplevel_print_options, [max_depth(30),quoted(true)]).
+true.
+
+8 ?- classT(Id,Pkg,'DrawApplet',Members).
+Id = 40568,
+Pkg = 139468,
+Members = [40578, 40586, 40587, 40588, 40589, 40590, 40591, 40592, 40593|...].
+
+b)
+private transient JComboBox          fFrameColor;
+
+c)
+the figure number 1_c
