@@ -1,0 +1,6 @@
+set title "Population Best/Mean/Least" 
+set xlabel "Generation"
+set ylabel "Fitness Value"
+plot "plotthis.txt" using 1 title 'Best' with lines,\
+	  "plotthis.txt" using 2 title 'Mean' with lines,\
+	  "plotthis.txt" using 3 title 'Least' with lines;
